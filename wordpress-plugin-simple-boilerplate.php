@@ -1,12 +1,24 @@
 <?php
-/**
-* Plugin Name: PB
-* Description: Plugin Extension Boilerplate
-* Version: 1.0.0
-* Author: Liam Bailey
-* Author URI: http://webbyscots.com/
-* License: GNU General Public License v3.0
-* License URI: http://www.gnu.org/licenses/gpl-3.0.html
+/*
+Plugin Name: plugin_name
+Plugin URI: https://dandulaney.com
+Description: Require a value for a field to match in order for form to submit
+Version: 1.0.0
+Author: Dan Dulaney
+Author URI: https://dandulaney.com
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Copyright 2019 by Dan Dulaney <dan.dulaney07@gmail.com>
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License version 2,
+    as published by the Free Software Foundation.
+    You may NOT assume that you can use any other version of the GPL.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    The license for this software can likely be found here:
+    http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
@@ -36,7 +48,7 @@ class Plugin_Boilerplate {
 			return;
 		load_plugin_textdomain($this->textdomain, false, dirname(plugin_basename(__FILE__)) . '/languages');
 		spl_autoload_register(array($this,'autoload'));
-       	$this->init();
+       		$this->init();
 	}
 
 	private function init() {
@@ -45,11 +57,11 @@ class Plugin_Boilerplate {
 
 	/* Autoload Classes */
    	function autoload($class) {
-       	$class = strtolower(str_replace("_","-",$class));
-       	$class_file = untrailingslashit(plugin_dir_path(__FILE__)) ."/includes/class-{$class}.php";
-       	if (file_exists($class_file)) {
-           	include_once($class_file);
-       	}
+       		$class = strtolower(str_replace("_","-",$class));
+       		$class_file = untrailingslashit(plugin_dir_path(__FILE__)) ."/includes/class-{$class}.php";
+       		if (file_exists($class_file)) {
+           		include_once($class_file);
+       		}
    	}
 
 	public static function instance() {
