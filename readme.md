@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/LiamBailey/WooCommerce-Vendors-Bookings-Dashboard/blob/master/licence">
+  <a href="https://github.com/duplaja/wordpress-plugin-simple-boilerplate/blob/master/licence">
     <img src="https://img.shields.io/aur/license/yaourt.svg?style=flat-square">
   </a>
 
