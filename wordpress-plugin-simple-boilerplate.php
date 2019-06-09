@@ -1,14 +1,14 @@
 <?php
 /*
 Plugin Name: plugin_name
-Plugin URI: https://dandulaney.com
-Description: Require a value for a field to match in order for form to submit
+Plugin URI: plugin_uri
+Description: plugin_desc
 Version: 1.0.0
-Author: Dan Dulaney
-Author URI: https://dandulaney.com
+Author: author_name
+Author URI: author_uri
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-    Copyright 2019 by Dan Dulaney <dan.dulaney07@gmail.com>
+    Copyright current_year by author_name <author_email>
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 2,
     as published by the Free Software Foundation.
@@ -22,9 +22,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
-class Plugin_Boilerplate {
+class Class_Name {
 
-	private $textdomain = "pb";
+	private $textdomain = "text_domain";
 	private $required_plugins = array();
 	public static $_instance;
 
@@ -53,14 +53,23 @@ class Plugin_Boilerplate {
 
 	private function init() {
 
+		//add_action( 'wp_enqueue_scripts', array( $this, 'load_assets' ));
+
 	}
 
+	//Loads on wp_enque_scripts hook, uncomment to use
+	private function load_assets() {
+		
+		//wp_enqueue_style( 'plugin_slug-main-style', plugin_dir_url( __FILE__ ) . 'css/main.css', array(), '1.0' ); 
+		//wp_enqueue_script( 'plugin_slug-main-script', plugin_dir_url( __FILE__ ) . 'js/main.js', array(), '0.1' ); 
+	}
+	
 	/* Autoload Classes */
    	function autoload($class) {
        		$class = strtolower(str_replace("_","-",$class));
        		$class_file = untrailingslashit(plugin_dir_path(__FILE__)) ."/includes/class-{$class}.php";
        		if (file_exists($class_file)) {
-           		include_once($class_file);
+           		require_once($class_file);
        		}
    	}
 
@@ -73,10 +82,10 @@ class Plugin_Boilerplate {
 }
 
 /* Use this function to call up the class from anywahere
-like PB()->class_method();
+like SHORT()->class_method();
  */
-function PB() {
+function SHORT() {
 	return PB::instance();
 }
 
-PB();
+SHORT();
