@@ -42,4 +42,4 @@ The part after new is what is searched for, as lowercase and with underscores as
 | text_domain | Directory name for translations, if any |
 | current_year | Current Year |
 | Class_Name | Name of Main Class |
-| SHORT |Short name for calling the class instance via function) |
+| SHORT |Short name for calling the class instance (via function) |
