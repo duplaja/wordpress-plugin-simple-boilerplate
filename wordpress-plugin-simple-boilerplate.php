@@ -81,11 +81,17 @@ class Class_Name {
 	}
 }
 
-/* Use this function to call up the class from anywahere
-like SHORT()->class_method();
- */
-function SHORT() {
-	return PB::instance();
-}
 
-SHORT();
+if ( ! function_exists( 'SHORT' ) ) {
+	/**
+ 	* Use this function to call up the class from anywhere like SHORT()->class_method();
+ 	*
+ 	* @param: None
+ 	* @return: Instance of Class_Name
+ 	*/
+	function SHORT() {
+		return Class_Name::instance();
+	}
+
+	SHORT();
+}
