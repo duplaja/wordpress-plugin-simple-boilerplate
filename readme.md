@@ -6,7 +6,7 @@
 
 </p>
 
-#WordPress Plugin Boilerplate#
+# WordPress Plugin Boilerplate (OOP)
 
 * Contributors: Webby Scots (Modified by Dan Dulaney)
 * License: GPLv2 or later
