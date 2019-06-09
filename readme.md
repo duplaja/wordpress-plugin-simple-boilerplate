@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/duplaja/wordpress-plugin-simple-boilerplate/blob/master/licence">
-    <img src="https://img.shields.io/aur/license/yaourt.svg?style=flat-square">
+  <a href="https://github.com/duplaja/wordpress-plugin-simple-boilerplate/LICENSE">
+    <img src="https://img.shields.io/cran/l/devtools.svg?style=plastic">
   </a>
 
 
