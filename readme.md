@@ -39,7 +39,7 @@ The part after new is what is searched for, as lowercase and with underscores as
 | author_name | Author Name |
 | author_uri | URL for Author |
 | author_email | E-mail for Author |
-| text_domain | Dir name for translations, if any |
+| text_domain | Directory name for translations, if any |
 | current_year | Current Year |
 | Class_Name | Name of Main Class |
 | SHORT |Short name for calling the class instance via function) |
