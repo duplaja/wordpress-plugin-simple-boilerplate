@@ -29,16 +29,17 @@ if ($this_condition) {
 
 The part after new is what is searched for, as lowercase and with underscores as dashes in the includes folder, but the class- part is prefixed for you.
 
-## Find and Replace Parameters
-
-plugin_name
-plugin_uri
-plugin_desc
-plugin_slug
-author_name
-author_uri
-author_email
-text_domain
-current_year
-Class_Name
-SHORT (Short name for calling the class instance via function)
+## Find and Replace Parameter Strings
+| String | Usage |
+|-------------|---------|
+| plugin_name | Name of Plugin |
+| plugin_uri | URL for Plugin |
+| plugin_desc | Description of Plugin |
+| plugin_slug | Folder / main file name |
+| author_name | Author Name |
+| author_uri | URL for Author |
+| author_email | E-mail for Author |
+| text_domain | Dir name for translations, if any |
+| current_year | Current Year |
+| Class_Name | Name of Main Class |
+| SHORT |Short name for calling the class instance via function) |
