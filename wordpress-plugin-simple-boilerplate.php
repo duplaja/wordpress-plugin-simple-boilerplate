@@ -24,6 +24,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+
+if (! function_exists('plugin_prefix_load_assets')) {
+	//add_action( 'wp_enqueue_scripts', 'plugin_prefix_load_assets' ));
+	//Loads on wp_enque_scripts hook, uncomment to use
+	function plugin_prefix_load_assets() {
+		
+		//wp_enqueue_style( 'plugin_slug-main-style', plugin_dir_url( __FILE__ ) . 'css/main.css', array(), '1.0' ); 
+		//wp_enqueue_script( 'plugin_slug-main-script', plugin_dir_url( __FILE__ ) . 'js/main.js', array(), '0.1' ); 
+	}
+}
+
+
 if ( ! class_exists( 'Class_Name' ) ) {
 
 	class Class_Name {
@@ -59,24 +71,17 @@ if ( ! class_exists( 'Class_Name' ) ) {
 
 		private function init() {
 
-			//add_action( 'wp_enqueue_scripts', array( $this, 'load_assets' ));
-
-		}
-
-		//Loads on wp_enque_scripts hook, uncomment to use
-		private function load_assets() {
 			
-			//wp_enqueue_style( 'plugin_slug-main-style', plugin_dir_url( __FILE__ ) . 'css/main.css', array(), '1.0' ); 
-			//wp_enqueue_script( 'plugin_slug-main-script', plugin_dir_url( __FILE__ ) . 'js/main.js', array(), '0.1' ); 
+
 		}
 		
 		/* Autoload Classes */
 		function autoload($class) {
-			$class = strtolower(str_replace("_","-",$class));
-			$class_file = untrailingslashit(plugin_dir_path(__FILE__)) ."/includes/class-{$class}.php";
-			if (file_exists($class_file)) {
-				require_once($class_file);
-			}
+				$class = strtolower(str_replace("_","-",$class));
+				$class_file = untrailingslashit(plugin_dir_path(__FILE__)) ."/includes/class-{$class}.php";
+				if (file_exists($class_file)) {
+					require_once($class_file);
+				}
 		}
 
 		public static function instance() {
