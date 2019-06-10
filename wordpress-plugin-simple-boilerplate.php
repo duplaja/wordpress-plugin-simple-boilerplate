@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 if (! function_exists('plugin_prefix_load_assets')) {
-	//add_action( 'wp_enqueue_scripts', 'plugin_prefix_load_assets' ));
+	//add_action( 'wp_enqueue_scripts', 'plugin_prefix_load_assets' );
 	//Loads on wp_enque_scripts hook, uncomment to use
 	function plugin_prefix_load_assets() {
 		
