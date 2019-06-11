@@ -88,7 +88,11 @@ if ( ! class_exists( 'Class_Name' ) ) {
 		}
 	}
 	
-		//add_action('wp_enqueue_scripts','TTT');
+	//Uncomment if class loads scripts / styles
+	//add_action('wp_enqueue_scripts','SHORT');
+	
+	//Comment out if class loads scripts / styles)
+	add_action('init','SHORT');
 }
 
 if ( ! function_exists( 'SHORT' ) ) {
