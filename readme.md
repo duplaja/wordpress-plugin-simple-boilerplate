@@ -36,7 +36,6 @@ The part after new is what is searched for, as lowercase and with underscores as
 | plugin_uri | URL for Plugin |
 | plugin_desc | Description of Plugin |
 | plugin_slug | Folder / main file name |
-| plugin_prefix | Used for enqueue function |
 | author_name | Author Name |
 | author_uri | URL for Author |
 | author_email | E-mail for Author |
