@@ -25,17 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-if (! function_exists('plugin_prefix_load_assets')) {
-	//add_action( 'wp_enqueue_scripts', 'plugin_prefix_load_assets' );
-	//Loads on wp_enque_scripts hook, uncomment to use
-	function plugin_prefix_load_assets() {
-		
-		//wp_enqueue_style( 'plugin_slug-main-style', plugin_dir_url( __FILE__ ) . 'css/main.css', array(), '1.0' ); 
-		//wp_enqueue_script( 'plugin_slug-main-script', plugin_dir_url( __FILE__ ) . 'js/main.js', array(), '0.1' ); 
-	}
-}
-
-
 if ( ! class_exists( 'Class_Name' ) ) {
 
 	class Class_Name {
@@ -68,11 +57,18 @@ if ( ! class_exists( 'Class_Name' ) ) {
 			spl_autoload_register(array($this,'autoload'));
 				$this->init();
 		}
-
 		private function init() {
+		
 
+			//$this->load_assets();
+
+		}
+
+		private function load_assets() {
 			
-
+			//wp_enqueue_style( 'plugin_slug-main-style', plugin_dir_url( __FILE__ ) . 'css/main.css', array(), '1.0' ); 
+			//wp_enqueue_script( 'plugin_slug-main-script', plugin_dir_url( __FILE__ ) . 'js/main.js', array(), '1.0' ); 
+		
 		}
 		
 		/* Autoload Classes */
@@ -91,6 +87,8 @@ if ( ! class_exists( 'Class_Name' ) ) {
 			return self::$_instance;
 		}
 	}
+	
+		//add_action('wp_enqueue_scripts','TTT');
 }
 
 if ( ! function_exists( 'SHORT' ) ) {
