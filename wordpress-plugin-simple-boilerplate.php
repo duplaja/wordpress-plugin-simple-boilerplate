@@ -59,9 +59,7 @@ if ( ! class_exists( 'Class_Name' ) ) {
 		}
 		private function init() {
 		
-
 			//$this->load_assets();
-
 		}
 
 		private function load_assets() {
@@ -73,11 +71,12 @@ if ( ! class_exists( 'Class_Name' ) ) {
 		
 		/* Autoload Classes */
 		function autoload($class) {
-				$class = strtolower(str_replace("_","-",$class));
-				$class_file = untrailingslashit(plugin_dir_path(__FILE__)) ."/includes/class-{$class}.php";
-				if (file_exists($class_file)) {
-					require_once($class_file);
-				}
+			
+			$class = strtolower(str_replace("_","-",$class));
+			$class_file = untrailingslashit(plugin_dir_path(__FILE__)) ."/includes/class-{$class}.php";
+			if (file_exists($class_file)) {
+				require_once($class_file);
+			}
 		}
 
 		public static function instance() {
